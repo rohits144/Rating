@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Premium</title>
+</head>
+<body>
+    {% block content %}
+    <form method="POST" action={% url premium %}></form>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+    {% endblock%}
+</body>
+</html>
